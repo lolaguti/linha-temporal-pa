@@ -1,0 +1,56 @@
+\documentclass[tikz, margin=3.141592mm]{standalone}
+\usetikzlibrary{arrows.meta, chains, positioning}
+
+\definecolor{verde}{RGB}{0, 71, 53}
+\definecolor{azul}{RGB}{211, 234, 252}
+
+\begin{document}
+    \pagecolor{azul}
+    \begin{tikzpicture}[
+        node distance = 10mm and 3mm,
+        start chain = A going below,
+        dot/.style = {circle, draw=verde, ultra thick, fill=white,
+                    minimum size=3mm},
+        box/.style = {rectangle, draw=verde, ultra thick, fill=white,
+                    text width=62mm,
+                    inner xsep=4mm, inner ysep=10mm,
+                    font=\sffamily\small\linespread{0.84}\selectfont,on chain,
+                    rounded corners=3mm},]
+        
+        \begin{scope}[every node/.append style={box}]
+			\node {Tales de Mileto \textcolor{gray}{-624 - -546}};
+			\node {Pitágoras de Samos \textcolor{gray}{-571 - -500}};
+			\node {Euclides de Alexandria \textcolor{gray}{-325 - -265}};
+			\node {Abu Alcuarismi \textcolor{gray}{780 - 850}};
+			\node {Abu Kamil \textcolor{gray}{850 - 930}};
+			\node {Leonardo Fibonacci \textcolor{gray}{1170 - 1250}};
+			\node {Niccolò Tartaglia \textcolor{gray}{1500 - 1557}};
+			\node {Girolamo Cardano \textcolor{gray}{1501 - 1576}};
+			\node {François Viète \textcolor{gray}{1540 - 1603}};
+			\node {Erland Bring \textcolor{gray}{1736 - 1798}};
+			\node {Paolo Ruffini \textcolor{gray}{1765 - 1822}};
+			\node {Geaorge Jerrad \textcolor{gray}{1804 - 1863}};
+			\node {Charles Hermite \textcolor{gray}{1822 - 1901}};
+			\node {Artemas Martin \textcolor{gray}{1835 - 1918}};
+			\node {Hermann Schubert \textcolor{gray}{1848 - 1911}};
+			\node {Henri Poincaré \textcolor{gray}{1854 - 1912}};
+			\node {Emil Artin \textcolor{gray}{1898 - 1962}};
+			\node {Philip Hall \textcolor{gray}{1904 - 1982}};
+			\node {Abraham Albert \textcolor{gray}{1905 - 1972}};
+			\node {Marshall Hall \textcolor{gray}{1910 - 1990}};
+			\node {Garret Birkhoff \textcolor{gray}{1911 - 1996}};
+			\node {Shimshon Amitsur \textcolor{gray}{1921 - 1994}};
+			\node {Michael Artin \textcolor{gray}{1934 - }};
+			\node {Robin Hartshorne \textcolor{gray}{1938 - }};
+			\node {Raman Parimala \textcolor{gray}{1948 - }};
+			\node {Alexander Merkurjev \textcolor{gray}{1955 - }};
+			\node {Alicia Dickenstein \textcolor{gray}{1955 - }};
+			\node {Tuna Altinel \textcolor{gray}{1966 - }};
+			\node {June Huh \textcolor{gray}{1983 - }};
+        \end{scope}
+        \draw[very thick, verde, shorten <=-3mm, shorten >=-3mm]
+            (A-1.north west) -- (A-29.south west);
+        \foreach \i in {1,...,29}
+            \node[dot] at (A-\i.west) {};
+    \end{tikzpicture}
+\end{document}
